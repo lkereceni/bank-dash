@@ -1,0 +1,27 @@
+:root {
+  /* Colors */
+  --primary-1: #feaa09;
+  --primary-2: #343c6a;
+  --primary-3: #2d60ff;
+  --secondary: #fe5c73;
+  --background-color: #f5f7fa;
+  --grey: #b1b1b1;
+  --light-blue-grey: #e6eff5;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.page-container {
+  height: 100vh;
+  background-color: var(--background-color);
+}

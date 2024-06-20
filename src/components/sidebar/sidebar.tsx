@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 
 import logo from "../../../public/logo.svg";
@@ -17,69 +19,74 @@ import {
 } from "@/icons";
 import Image from "next/image";
 import Link from "next/link";
-
-const sidebarItems: SidebarProps[] = [
-  {
-    title: "Dashboard",
-    href: "/",
-    icon: <DashboardIcon />,
-    isActive: false,
-  },
-  {
-    title: "Transactions",
-    href: "/transactions",
-    icon: <TransactionsIcon />,
-    isActive: false,
-  },
-  {
-    title: "Accounts",
-    href: "/accounts",
-    icon: <AccountsIcon />,
-    isActive: false,
-  },
-  {
-    title: "Investments",
-    href: "/investments",
-    icon: <InvestmentsIcon />,
-    isActive: false,
-  },
-  {
-    title: "Credit Cards",
-    href: "/credit-cards",
-    icon: <CreditCardsIcon />,
-    isActive: false,
-  },
-  {
-    title: "Loans",
-    href: "/loans",
-    icon: <LoansIcon />,
-    isActive: false,
-  },
-  {
-    title: "Services",
-    href: "/services",
-    icon: <ServicesIcon />,
-    isActive: false,
-  },
-  {
-    title: "My Privileges",
-    href: "/my-privileges",
-    icon: <MyPrivilegesIcon />,
-    isActive: false,
-  },
-  {
-    title: "Settings",
-    href: "/settings",
-    icon: <SettingsIcon />,
-    isActive: false,
-  },
-];
+import { usePathname } from "next/navigation";
 
 export const Sidebar = () => {
+  const pathname = usePathname();
+
+  console.log(pathname);
+
+  const sidebarItems: SidebarProps[] = [
+    {
+      title: "Dashboard",
+      href: "/",
+      icon: <DashboardIcon />,
+      isActive: pathname === "/",
+    },
+    {
+      title: "Transactions",
+      href: "/transactions",
+      icon: <TransactionsIcon />,
+      isActive: pathname === "/transactions",
+    },
+    {
+      title: "Accounts",
+      href: "/accounts",
+      icon: <AccountsIcon />,
+      isActive: pathname === "/accounts",
+    },
+    {
+      title: "Investments",
+      href: "/investments",
+      icon: <InvestmentsIcon />,
+      isActive: pathname === "/investments",
+    },
+    {
+      title: "Credit Cards",
+      href: "/credit-cards",
+      icon: <CreditCardsIcon />,
+      isActive: pathname === "/credit-cards",
+    },
+    {
+      title: "Loans",
+      href: "/loans",
+      icon: <LoansIcon />,
+      isActive: pathname === "/loans",
+    },
+    {
+      title: "Services",
+      href: "/services",
+      icon: <ServicesIcon />,
+      isActive: pathname === "/services",
+    },
+    {
+      title: "My Privileges",
+      href: "/my-privileges",
+      icon: <MyPrivilegesIcon />,
+      isActive: pathname === "/my-privileges",
+    },
+    {
+      title: "Settings",
+      href: "/settings",
+      icon: <SettingsIcon />,
+      isActive: pathname === "/settings",
+    },
+  ];
+
   return (
     <aside className={styles.container}>
       <Link href="/">
-        <Image src={logo} alt="bank-dash-logo" />
+        <Image priority src={logo} alt="bank-dash-logo" />
       </Link>
       <nav>
         {sidebarItems.map((item, index) => (

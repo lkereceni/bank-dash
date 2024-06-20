@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 
 import styles from "./sidebar-item.module.css";
 import Link from "next/link";
+import clsx from "clsx";
 
 export type SidebarProps = {
   title: string;
@@ -12,7 +13,12 @@ export type SidebarProps = {
 
 export const SidebarItem = ({ title, icon, href, isActive }: SidebarProps) => {
   return (
-    <Link href={href} className={styles["sidebar-item-container"]}>
+    <Link
+      href={href}
+      className={clsx(styles["sidebar-item-container"], {
+        [styles.active]: isActive,
+      })}
+    >
       <div className={styles.icon}>{icon}</div>
       <h3 className={styles.title}>{title}</h3>
     </Link>

@@ -36,10 +36,30 @@
   font-weight: 400;
 }
 
-.sidebar-item-container:hover .icon svg path {
+.sidebar-item-container:hover .icon svg path,
+.active .icon svg path {
   fill: var(--primary-3);
 }
 
 .sidebar-item-container:hover .title {
   color: var(--primary-3);
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 6px;
+  background-color: var(--primary-3);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.active .title {
+  color: var(--primary-3);
+}
+
+.active .icon svg path {
 }

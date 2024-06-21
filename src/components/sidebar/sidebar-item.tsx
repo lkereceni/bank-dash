@@ -4,14 +4,19 @@ import styles from "./sidebar-item.module.css";
 import Link from "next/link";
 import clsx from "clsx";
 
-export type SidebarProps = {
+export type SidebarItemProps = {
   title: string;
   href: string;
   icon: ReactNode;
   isActive: boolean;
 };
 
-export const SidebarItem = ({ title, icon, href, isActive }: SidebarProps) => {
+export const SidebarItem = ({
+  title,
+  icon,
+  href,
+  isActive,
+}: SidebarItemProps) => {
   return (
     <Link
       href={href}

@@ -1,0 +1,15 @@
+.icon-button-container {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-color);
+  border: none;
+  border-radius: 50px;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(0.85);
+  }
+}

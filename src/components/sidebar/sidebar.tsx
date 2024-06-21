@@ -5,7 +5,7 @@ import React from "react";
 import logo from "../../../public/logo.svg";
 
 import styles from "./sidebar.module.css";
-import { SidebarItem, SidebarProps } from "./sidebar-item";
+import { SidebarItem, SidebarItemProps } from "./sidebar-item";
 import {
   AccountsIcon,
   CreditCardsIcon,
@@ -24,9 +24,7 @@ import { usePathname } from "next/navigation";
 export const Sidebar = () => {
   const pathname = usePathname();
 
-  console.log(pathname);
-
-  const sidebarItems: SidebarProps[] = [
+  const sidebarItems: SidebarItemProps[] = [
     {
       title: "Dashboard",
       href: "/",
@@ -84,7 +82,7 @@ export const Sidebar = () => {
   ];
 
   return (
-    <aside className={styles.container}>
+    <aside className={styles["sidebar-container"]}>
       <Link href="/">
         <Image priority src={logo} alt="bank-dash-logo" />
       </Link>

@@ -1,0 +1,23 @@
+.header-container {
+  width: calc(100vw - 250px);
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px 40px;
+  border-bottom: 1px solid var(--light-blue-grey);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--primary-2);
+}
+
+.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}

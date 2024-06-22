@@ -1,1 +1,57 @@
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: 32px;
+  row-gap: 24px;
+  padding: 24px 40px;
+}
 
+.card-one {
+  height: 235px;
+  grid-column: span 4;
+  background: var(--blue-gradient);
+  border-radius: 24px;
+}
+
+.card-two {
+  height: 235px;
+  grid-column: 5 / 9;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid var(--light-grey);
+}
+
+.recent-transaction {
+  height: 235px;
+  grid-column: 9 / 13;
+  background: white;
+  border-radius: 24px;
+}
+
+.weekly-activity {
+  height: 322px;
+  grid-column: span 8;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.expense-statistics {
+  height: 322px;
+  grid-column: 9 / 13;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.quick-transfer {
+  height: 276px;
+  grid-column: span 5;
+  background-color: white;
+  border-radius: 24px;
+}
+
+.balance-history {
+  height: 276px;
+  grid-column: 6 / 13;
+  background-color: white;
+  border-radius: 24px;
+}

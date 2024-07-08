@@ -1,0 +1,26 @@
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.primary,
+.plain {
+  color: var(--primary-2);
+  font-size: 15px;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.plain {
+  border: none;
+  font-weight: 600;
+}
+
+.button-container.primary {
+  border: 1px solid var(--primary-2);
+}

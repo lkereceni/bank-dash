@@ -5,7 +5,7 @@ import React from "react";
 import styles from "./header.module.css";
 import clsx from "clsx";
 import { Search } from "../search/search";
-import { IconButton } from "../icon-button/icon-button";
+import { IconButton } from "../buttons/icon-button/icon-button";
 import { SettingsOutlineIcon } from "@/icons";
 
 type HeaderProps = {

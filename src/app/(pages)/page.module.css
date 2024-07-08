@@ -6,25 +6,33 @@
   padding: 24px 40px;
 }
 
-.card-one {
-  height: 235px;
-  grid-column: span 4;
-  background: var(--blue-gradient);
-  border-radius: 24px;
+.grid-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.card-two {
-  height: 235px;
-  grid-column: 5 / 9;
-  background: white;
-  border-radius: 24px;
-  border: 1px solid var(--light-grey);
+.my-cards-grid {
+  grid-column: span 8;
 }
 
-.recent-transaction {
-  height: 235px;
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px;
+}
+
+.recent-transactions {
   grid-column: 9 / 13;
-  background: white;
+  border-radius: 24px;
+}
+
+/* ! Temporary */
+.recent-transactions-div {
+  height: 235px;
+  width: 100%;
+  background-color: white;
   border-radius: 24px;
 }
 

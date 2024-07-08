@@ -1,0 +1,35 @@
+.labeled-value-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.label {
+  font-family: var(--font-lato);
+  font-weight: 400;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.value {
+  font-family: var(--font-lato);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.white {
+  color: white;
+}
+
+.primary-two {
+  color: var(--primary-2);
+}
+
+.label.white {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.label.primary-two {
+  color: var(--primary-2-light);
+}

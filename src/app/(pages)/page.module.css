@@ -12,6 +12,15 @@
   gap: 20px;
 }
 
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 24px;
+  padding: 28px;
+}
+
 .my-cards-grid {
   grid-column: span 8;
 }
@@ -37,10 +46,7 @@
 }
 
 .weekly-activity {
-  height: 322px;
   grid-column: span 8;
-  background-color: white;
-  border-radius: 24px;
 }
 
 .expense-statistics {

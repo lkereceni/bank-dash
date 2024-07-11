@@ -5,6 +5,7 @@ import React from "react";
 import styles from "./page.module.css";
 import clsx from "clsx";
 import { CreditCard, GridItemHeader } from "@/components";
+import { CustomBarChart } from "@/components/charts/custom-bar-chart/custom-bar-chart";
 
 const DashboardPage = () => {
   return (
@@ -20,7 +21,12 @@ const DashboardPage = () => {
         <GridItemHeader title="Recent Transactions" />
         <div className={styles["recent-transactions-div"]}></div>
       </div>
-      <div className={styles["weekly-activity"]}></div>
+      <div className={clsx(styles["weekly-activity"], styles["grid-flex"])}>
+        <GridItemHeader title="Weekly Activity" />
+        <div className={styles.card}>
+          <CustomBarChart />
+        </div>
+      </div>
       <div className={styles["expense-statistics"]}></div>
       <div className={styles["quick-transfer"]}></div>
       <div className={styles["balance-history"]}></div>

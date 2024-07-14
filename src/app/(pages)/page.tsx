@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { CreditCard, GridItemHeader } from "@/components";
 import { CustomBarChart } from "@/components/charts/custom-bar-chart/custom-bar-chart";
 import { CustomPieChart } from "@/components/charts/custom-pie-chart/custom-pie-chart";
+import { CustomLineChart } from "@/components/charts/custom-line-chart/custom-line-chart";
 
 const DashboardPage = () => {
   return (
@@ -35,7 +36,12 @@ const DashboardPage = () => {
         </div>
       </div>
       <div className={styles["quick-transfer"]}></div>
-      <div className={styles["balance-history"]}></div>
+      <div className={clsx(styles["balance-history"], styles["grid-flex"])}>
+        <GridItemHeader title="Balance History" />
+        <div className={styles.card}>
+          <CustomLineChart />
+        </div>
+      </div>
     </div>
   );
 };

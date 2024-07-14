@@ -8,3 +8,8 @@ export type ExpenseStatistics = {
   expenseLabel: string;
   expensePercentage: number;
 };
+
+export type BalanceHistory = {
+  month: string;
+  balance: number;
+};

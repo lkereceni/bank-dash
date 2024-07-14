@@ -3,3 +3,8 @@ export type WeeklyActivity = {
   deposit: number;
   withdraw: number;
 };
+
+export type ExpenseStatistics = {
+  expenseLabel: string;
+  expensePercentage: number;
+};

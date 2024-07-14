@@ -50,10 +50,7 @@
 }
 
 .expense-statistics {
-  height: 322px;
   grid-column: 9 / 13;
-  background-color: white;
-  border-radius: 24px;
 }
 
 .quick-transfer {
